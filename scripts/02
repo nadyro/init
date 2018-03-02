@@ -1,0 +1,5 @@
+# write this code in a file (update.sh in /home/vagrant/)
+apt-get update >> /var/log/update_script.log && apt-get upgrade -y >> /var/log/update_script.log << EOF
+
+# m h dom mon dow user	command
+  0 4 	*   *   1 root	/home/vagrant/update.sh

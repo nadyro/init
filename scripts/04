@@ -1,0 +1,14 @@
+echo $(md5sum /etc/crontab.backup) | cut -d' ' -f1 > old
+echo $(md5sum /etc/crontab) | cut -d' ' -f1 > new
+DIFF=$(diff old new)
+if [ "$DIFF" != "" ]
+then
+    mail -s "File [Crontab was modified.]" root@localhost.com < /etc/crontab
+    echo "File was modified."
+fi
+cat /etc/crontab > /etc/crontab.backup
+rm old new
+
+#In /etc/crontab File
+# m h dom mon dow user	command
+  0 0   *   *   * root  sh /home/vagrant/mailto_root.sh

@@ -1,1 +1,1 @@
-route -n get slash16.org
+dig slash16.org | grep SERVER | awk '{print $3}' | awk -F '#' '{print $1}'
