@@ -11,4 +11,4 @@ rm old new
 
 #In /etc/crontab File
 # m h dom mon dow user	command
-  0 0   *   *   * root  sh /home/vagrant/mailto_root.sh
+# 0 0   *   *   * root  sh /home/vagrant/mailto_root.sh

@@ -1,2 +1,3 @@
-Il faut utiliser le fichier /etc/hosts et utiliser écrire cette ligne :
+Il faut utiliser le fichier /etc/hosts et écrire cette ligne à la suite des autres:
 46.19.122.85            intra.42.fr
+echo "46.19.122.85   intra.42.fr" >> /etc/hosts

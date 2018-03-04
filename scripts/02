@@ -2,4 +2,4 @@
 apt-get update >> /var/log/update_script.log && apt-get upgrade -y >> /var/log/update_script.log << EOF
 
 # m h dom mon dow user	command
-  0 4 	*   *   1 root	/home/vagrant/update.sh
+# 0 4 	*   *   1 root	/home/vagrant/update.sh
